@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="630dp"
+    tools:context=".FriendProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profileImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_launcher_background"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="닉네임"
+        android:textColor="#F5020202"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+    <TextView
+        android:id="@+id/realNickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="설정한 닉네임"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Nickname"
+        app:layout_constraintTop_toTopOf="@id/Nickname" />
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="이메일"
+        android:textColor="#F5020202"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/Nickname" />
+
+    <TextView
+        android:id="@+id/realEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gg@naver.com"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Email"
+        app:layout_constraintTop_toTopOf="@id/Email" />
+
+    <TextView
+        android:id="@+id/Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="상태메세지"
+        android:textColor="#F5020202"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
+
+    <TextView
+        android:id="@+id/realMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="진짜 상태메세지"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Message" />
+
+    <TextView
+        android:id="@+id/PhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:text="전화번호"
+        android:textColor="#F5020202"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/Message" />
+
+    <TextView
+        android:id="@+id/realPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="전화번호"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber" />
+
+    <Button
+        android:id="@+id/btnAddFriend"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button"
+        android:text="친구추가"
+        android:textColor="#FFF"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnCall"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnCancelFriend"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button"
+        android:text="친구취소"
+        android:textColor="#FFF"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnCall"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button"
+        android:layout_marginTop="30dp"
+        android:text="전화걸기"
+        android:textColor="#FFF"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/realPhoneNumber"
+        android:visibility="gone"/>
+
+</android.support.constraint.ConstraintLayout>

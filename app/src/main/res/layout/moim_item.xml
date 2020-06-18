@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="132dp"
+    android:background="@drawable/border_updown">
+
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="8/2/2019"
+        android:textColor="#4DB6AC"
+        android:textSize="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:text="10:00 AM"
+        android:textColor="#4DB6AC"
+        android:textSize="19dp"
+        app:layout_constraintStart_toEndOf="@id/Date"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="뚝섬 한강 라이딩"
+        android:padding="4dp"
+        android:textSize="25dp"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Time" />
+
+    <ImageView
+        android:id="@+id/map_pin"
+        android:layout_width="31dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/Title"
+        app:layout_constraintTop_toBottomOf="@id/Title"
+        app:srcCompat="@drawable/map_pin" />
+
+    <TextView
+        android:id="@+id/Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="건대입구역"
+        android:textColor="#F5020202"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@id/map_pin"
+        app:layout_constraintTop_toTopOf="@+id/map_pin" />
+
+    <TextView
+        android:id="@+id/CurrentMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/Location"
+        android:text="1"
+        android:textSize="18dp"
+        android:textColor="#F5020202"
+        app:layout_constraintEnd_toStartOf="@id/FavoriteIcon"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toEndOf="@+id/Location" />
+
+    <TextView
+        android:id="@+id/Slash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/Location"
+        android:text=" / "
+        android:textSize="18dp"
+        android:textColor="#F5020202"
+        app:layout_constraintStart_toEndOf="@+id/CurrentMember" />
+
+    <TextView
+        android:id="@+id/Members"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/Location"
+        android:text="8"
+        android:textSize="18dp"
+        android:textColor="#F5020202"
+        app:layout_constraintStart_toEndOf="@+id/Slash" />
+
+    <TextView
+        android:id="@+id/myeong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/Location"
+        android:text="명"
+        android:textSize="18dp"
+        android:textColor="#F5020202"
+        app:layout_constraintStart_toEndOf="@+id/Members" />
+
+    <ImageView
+        android:id="@+id/FavoriteIcon"
+        android:layout_width="49dp"
+        android:layout_height="46dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintBottom_toBottomOf="@id/Members"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/starbasic"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/FavoriteIcon_click"
+        android:layout_width="49dp"
+        android:layout_height="47dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintBottom_toBottomOf="@id/Members"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/star"
+        android:visibility="invisible"/>
+
+</android.support.constraint.ConstraintLayout>
